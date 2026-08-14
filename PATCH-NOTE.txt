@@ -1,0 +1,15 @@
+POSTGRESQL BOOKINGS FIX
+
+Fixed admin/bookings.php:
+  $where = array('1');
+was changed to:
+  $where = array('TRUE');
+
+PostgreSQL requires a boolean expression in WHERE clauses.
+
+Upload these 3 files to your GitHub backend repository:
+- Dockerfile
+- app.zip
+- render.yaml
+
+Then Render -> Manual Deploy -> Clear build cache & deploy.
