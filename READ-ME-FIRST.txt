@@ -1,0 +1,28 @@
+RUSTIC ROSE — FINAL RENDER PACKAGE
+
+This version removes ALL .htaccess files and configures Apache directly.
+
+UPLOAD ONLY THESE 3 FILES TO THE ROOT OF YOUR GitHub rustic-rose-backend REPOSITORY:
+1. Dockerfile
+2. rustic-rose-app-clean.zip
+3. render.yaml
+
+IMPORTANT:
+Delete the previous Dockerfile and previous rustic-rose-app.zip from GitHub first.
+Do not unzip rustic-rose-app-clean.zip before uploading it to GitHub.
+
+After committing:
+Render -> Manual Deploy -> Clear build cache & deploy.
+
+Required Render Environment Variables:
+DB_HOST
+DB_PORT=5432
+DB_NAME=postgres
+DB_USER
+DB_PASSWORD
+DB_SSLMODE=require
+APP_TIMEZONE=America/Chicago
+
+After Render becomes Live, test:
+https://rustic-rose-backend.onrender.com/health.php
+https://rustic-rose-backend.onrender.com/admin/login.php
