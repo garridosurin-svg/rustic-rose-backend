@@ -1,0 +1,5 @@
+Rustic Rose - Safe Working Build
+
+This build is based on the last working Explore Us/gallery version.
+No database tables or columns were added or changed.
+Existing admin booking, calendar, admin-account, export, login, gallery, and website functionality are preserved.

@@ -1,0 +1,27 @@
+RUSTIC ROSE — VISIBLE ADMIN UPGRADE (NO SQL CHANGES)
+
+This build visibly upgrades the admin dashboard and bookings page without changing the database schema.
+
+Dashboard:
+- 8 KPI cards: Total, Pending, Confirmed, Completed, Today, This Week, This Month, Upcoming
+- 6-month booking trend chart
+- Status pipeline percentage bars
+- Next 5 events panel
+- Enhanced quick actions
+
+Bookings:
+- Search by reference, name, email, phone or service
+- Status + service + event date range filters
+- 10/25/50/100 rows per page
+- Pagination
+- Copy booking reference
+- Email client shortcut
+- Clear filters button
+
+Admin-wide:
+- Dark/Light mode stored in the browser (localStorage)
+- Keyboard shortcut: press / on Bookings to focus search
+- Toast confirmation for copied references
+- Responsive styling
+
+No new SQL tables or columns were added.

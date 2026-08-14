@@ -1,0 +1,17 @@
+Rustic Rose Productions - Production Checklist
+
+Updated in this build:
+- Fixed sitemap URLs to use the production domain only.
+- Added canonical/Open Graph metadata to key public pages.
+- Cleaned duplicate .htaccess directives.
+- Added a Content Security Policy compatible with current Google Fonts / Google Maps usage.
+- Added the same minimum-submit-time anti-bot check to booking.php as the homepage form.
+- Removed obsolete duplicate HTML pages while preserving 301 redirect rules.
+- Optimized the largest image and compressed key PNG assets.
+
+Before going live:
+1. Configure DB_HOST, DB_NAME, DB_USER and DB_PASSWORD on the production host.
+2. Confirm HTTPS is active on https://www.rusticroseproductions.com.
+3. Test booking submissions and admin login on the live database.
+4. Verify Google Maps, social links, and all pages after deployment.
+5. Submit /sitemap.xml in Google Search Console when the production domain is ready.

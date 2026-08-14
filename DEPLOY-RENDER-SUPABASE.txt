@@ -1,0 +1,43 @@
+RUSTIC ROSE - RENDER + SUPABASE DEPLOYMENT
+
+1) SUPABASE DATABASE
+- Create a Supabase project.
+- Open SQL Editor.
+- Copy/paste the full contents of: database/supabase-postgres.sql
+- Run it once.
+- In Supabase: Project Settings / Database, copy your PostgreSQL connection details.
+- Prefer the Supavisor/session-pooler connection details if your environment has IPv4 limitations.
+
+2) GITHUB
+- Upload this project folder to a PRIVATE GitHub repository.
+- Do NOT commit .env files or database/rustic_rose_mysql_original.sql.
+
+3) RENDER
+- New > Web Service > connect the GitHub repo.
+- Runtime: Docker.
+- Render should build the included Dockerfile.
+- Add these environment variables:
+  DB_HOST=<Supabase database/pooler host>
+  DB_PORT=<port supplied by Supabase, commonly 5432 for direct/session connections>
+  DB_NAME=postgres
+  DB_USER=<Supabase database/pooler user>
+  DB_PASSWORD=<your Supabase database password>
+  DB_SSLMODE=require
+  APP_TIMEZONE=America/Chicago
+- Deploy.
+
+4) TEST
+- Open the Render URL.
+- Submit a test booking.
+- Open /admin/login.php and sign in using the administrator record imported from your SQL.
+- Confirm Dashboard, Bookings, Calendar, and Activity Logs work.
+- Change/rotate the admin password after first successful deployment if this archive has been shared.
+
+5) CUSTOM DOMAIN
+- Once Render works, add www.rusticroseproductions.com in Render Custom Domains.
+- Update DNS at the client's domain provider using the values Render gives you.
+
+NOTES
+- This package runs the PHP frontend + PHP admin/backend together on Render.
+- Supabase is used as PostgreSQL.
+- Netlify is intentionally not required for this version because the original project is PHP-rendered. Splitting the public frontend to Netlify would require converting PHP pages to static HTML/JS/API calls.
