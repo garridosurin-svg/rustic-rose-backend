@@ -3,4 +3,3 @@ services:
     name: rustic-rose-backend
     runtime: docker
     plan: free
-    healthCheckPath: /health.php

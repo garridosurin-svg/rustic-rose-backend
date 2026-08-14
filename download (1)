@@ -1,1 +1,6 @@
-Require all denied
+database/*.sql
+!database/supabase-postgres.sql
+logs/*.log
+logs/rate-limit/
+.git
+.env

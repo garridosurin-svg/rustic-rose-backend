@@ -1,1 +1,4 @@
-Require all denied
+.env
+logs/*.log
+logs/rate-limit/
+database/rustic_rose_mysql_original.sql
