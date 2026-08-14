@@ -1,0 +1,19 @@
+RUSTIC ROSE — FORM 'FAILED TO FETCH' FIX
+
+Cause:
+The Netlify frontend submits directly to the Render API, but the old API CORS
+configuration only allowed FRONTEND_ORIGIN when it exactly matched.
+
+Fix:
+api/cors.php now allows public POST/OPTIONS form submissions from the browser.
+This applies to the public form API endpoints, not the admin dashboard.
+
+Upload to GitHub backend:
+- Dockerfile
+- app.zip
+- render.yaml
+
+Then Render:
+Manual Deploy -> Clear build cache & deploy
+
+After deploy, submit the homepage form again.
