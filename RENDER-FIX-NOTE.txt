@@ -1,0 +1,1 @@
+This package no longer depends on docker/apache.conf. Upload the EXTRACTED contents to the root of your GitHub repository, then redeploy the latest commit on Render.

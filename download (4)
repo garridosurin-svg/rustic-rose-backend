@@ -1,4 +1,6 @@
-.env
+database/*.sql
+!database/supabase-postgres.sql
 logs/*.log
 logs/rate-limit/
-database/rustic_rose_mysql_original.sql
+.git
+.env
