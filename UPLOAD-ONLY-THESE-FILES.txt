@@ -1,0 +1,32 @@
+RUSTIC ROSE - SAFE RENDER UPLOAD
+
+WHY THIS VERSION:
+GitHub browser uploads can flatten folders. This package stores the complete PHP
+application inside rustic-rose-app.zip. Render's Docker build unpacks it and
+verifies these required files exist:
+  includes/bootstrap.php
+  admin/login.php
+  api/submit-booking.php
+
+UPLOAD THESE THREE FILES TO THE ROOT OF YOUR GitHub rustic-rose-backend repo:
+  Dockerfile
+  rustic-rose-app.zip
+  render.yaml
+
+Delete the old backend files first if possible, so the repository is clean.
+
+Then Render:
+  Manual Deploy -> Deploy latest commit
+
+Required Render environment variables:
+  DB_HOST
+  DB_PORT=5432
+  DB_NAME=postgres
+  DB_USER
+  DB_PASSWORD
+  DB_SSLMODE=require
+  APP_TIMEZONE=America/Chicago
+
+After deploy test:
+  https://rustic-rose-backend.onrender.com/health.php
+  https://rustic-rose-backend.onrender.com/admin/login.php

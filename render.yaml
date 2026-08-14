@@ -1,24 +1,6 @@
 services:
   - type: web
-    name: rustic-rose
+    name: rustic-rose-backend
     runtime: docker
     plan: free
-    autoDeploy: true
     healthCheckPath: /health.php
-    envVars:
-      - key: DB_HOST
-        sync: false
-      - key: DB_PORT
-        value: "5432"
-      - key: DB_NAME
-        value: postgres
-      - key: DB_USER
-        sync: false
-      - key: DB_PASSWORD
-        sync: false
-      - key: DB_SSLMODE
-        value: require
-      - key: APP_TIMEZONE
-        value: America/Chicago
-      - key: FRONTEND_ORIGIN
-        sync: false
